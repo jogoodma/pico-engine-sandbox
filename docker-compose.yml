@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  todo-server:
+    build:
+      context: .
+    ports:
+      - "127.0.0.1::3000"
+    volumes:
+      - todo-vol:/var/pico-image
+    networks:
+      - todo
+
+networks:
+  todo:
+
+volumes:
+  todo-vol: {}
+
